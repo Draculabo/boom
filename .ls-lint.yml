@@ -1,0 +1,8 @@
+ls:
+  /{packages}/*:
+    .dir: kebab-case | regex:__[a-z0-9]+__
+    .scss: kebab-case
+    .vue: kebab-case
+    .js: kebab-case | pointcase
+    .ts: kebab-case | pointcase
+    .tsx: kebab-case | pointcase

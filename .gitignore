@@ -1,0 +1,12 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+build
+types
+*.local
+package-lock.json
+.history
+.vscode
+.pnpm-debug.log
+coverage
