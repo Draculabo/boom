@@ -22,7 +22,7 @@
     ],
     "declaration": true,
     "declarationDir": "build/types",
-    "forceConsistentCasingInFileNames":true
+    "forceConsistentCasingInFileNames":false
   },
   "include": [
     "src/**/*.ts",
