@@ -1,0 +1,56 @@
+@import './basic_color';
+
+// 基础变量
+$boom-global-bg: var(--boom-global-bg, #f3f6f8); // 全局带底色背景
+$boom-global-bg-normal: var(--boom-global-bg-normal, #ffffff); // 全局白色背景
+$boom-base-bg: var(--boom-base-bg, #ffffff); // 基础区块背景白色
+$boom-base-bg-dark: var(--boom-base-bg-dark, #333854); // 基础区块背景深色(固定)
+$boom-brand: var(--boom-brand, #5e7ce0); // 品牌色
+$boom-brand-foil: var(--boom-brand-foil, #859bff); // 品牌色辅助色、正衬色
+$boom-brand-hover: var(--boom-brand-hover, #7693f5); // 品牌色高亮色（加亮）
+$boom-brand-active: var(--boom-brand-active, #526ecc); // 品牌色激活色（加深）
+$boom-brand-active-focus: var(--boom-brand-active-focus, #344899); // 品牌色焦点色（重度加深）
+$boom-contrast: var(--boom-contrast, #c7000b); // 品牌色撞色、对比色、反衬色、第二品牌色
+$boom-text: var(--boom-text, #252b3a); // 正文文本
+$boom-text-weak: var(--boom-text-weak, #575d6c); // 弱化的正文信息（手风琴子项，表头）
+$boom-aide-text: var(--boom-aide-text, #8a8e99); // 辅助文本、帮助信息（面包屑）
+$boom-aide-text-stress: var(--boom-aide-text-stress, #575d6c); // 辅助文本、帮助信息里的强调色
+$boom-placeholder: var(--boom-placeholder, #8a8e99); // 占位符
+$boom-light-text: var(--boom-light-text, #ffffff); // 有色深色背景下字体颜色（固定）
+$boom-dark-text: var(--boom-dark-text, #252b3a); // 有色浅色背景下字体颜色（固定）
+$boom-link: var(--boom-link, #526ecc); // 链接文本颜色
+$boom-link-active: var(--boom-link-active, #344899); // 链接文本悬停/激活颜色
+$boom-link-light: var(--boom-link-light, #96adfa); // 深色背景下链接文本颜色
+$boom-link-light-active: var(--boom-link-light-active, #beccfa); // 深色背景下链接文本悬停/激活颜色
+$boom-line: var(--boom-line, #adb0b8); // 边框分割线，仅用于边框
+$boom-dividing-line: var(--boom-dividing-line, #dfe1e6); // 内容分割线，用于内容之间的分割
+$boom-block: var(--boom-block, #ffffff); // 大面积的不可折叠区块的背景色（例如顶部导航背景色）
+$boom-area: var(--boom-area, #f8f8f8); // 可折叠区块的背景色（展开区域颜色）
+$boom-danger: var(--boom-danger, #f66f6a); // 失败、错误、告警
+$boom-warning: var(--boom-warning, #fac20a); // 警告、需注意类型提示
+$boom-waiting: var(--boom-waiting, #9faad7); // 等待中
+$boom-success: var(--boom-success, #50d4ab); // 成功、正确
+$boom-info: var(--boom-info, #5e7ce0); // 通知、一般提示、执行中
+$boom-initial: var(--boom-initial, #e9edfa); // 初始化、未执行
+$boom-unavailable: var(--boom-unavailable, #f5f5f6); // 不可用、禁用状态
+$boom-shadow: var(--boom-shadow, rgb(0 0 0 / 20%)); // 阴影色
+$boom-light-shadow: var(--boom-light-shadow, rgb(0 0 0 / 10%)); // 弱化阴影色
+
+// 状态
+$boom-danger-line: var(--boom-danger-line, #f66f6a); // 失败边框
+$boom-danger-bg: var(--boom-danger-bg, #ffeeed); // 失败底色
+
+$boom-warning-line: var(--boom-warning-line, #fa9841); // 警告边框
+$boom-warning-bg: var(--boom-warning-bg, #fff3e8); // 警告底色
+
+$boom-info-line: var(--boom-info-line, #5e7ce0); // 通知边框
+$boom-info-bg: var(--boom-info-bg, #f2f5fc); // 通知底色
+
+$boom-success-line: var(--boom-success-line, #50d4ab); // 成功边框
+$boom-success-bg: var(--boom-success-bg, #edfff9); // 成功底色
+
+$boom-primary-line: var(--boom-primary-line, #5e7ce0); // 主要边框
+$boom-primary-bg: var(--boom-primary-bg, #f2f5fc); // 主要底色
+
+$boom-default-line: var(--boom-default-line, #5e7ce0); // 默认边框
+$boom-default-bg: var(--boom-default-bg, #f3f6f8); // 默认底色
