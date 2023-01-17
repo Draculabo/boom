@@ -1,0 +1,60 @@
+@import '../../../theme/boomui-var';
+.#{$boom-prefix}-status {
+  line-height: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    display: inline-block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 100%;
+  }
+}
+
+.#{$boom-prefix}-status.#{$boom-prefix}-status__bg {
+  &--success {
+    &::before {
+      background-color: $boom-success;
+    }
+  }
+
+  &--error {
+    &::before {
+      background-color: $boom-danger;
+    }
+  }
+
+  &--warning {
+    &::before {
+      background-color: $boom-warning;
+    }
+  }
+
+  &--initial {
+    &::before {
+      background-color: $boom-initial;
+    }
+  }
+
+  &--waiting {
+    &::before {
+      background-color: $boom-waiting;
+    }
+  }
+
+  &--running {
+    &::before {
+      background-color: $boom-info;
+    }
+  }
+
+  &--invalid {
+    &::before {
+      background-color: $boom-dividing-line;
+    }
+  }
+}

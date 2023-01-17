@@ -1,3 +1,6 @@
+<script setup lang="ts">
+import Status from './components/status';
+</script>
 <template>
-  <div>111</div>
+  <Status type="warning"> afdfs </Status>
 </template>
