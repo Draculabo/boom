@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import Status from './components/status';
+import Layout from './components/layout';
 </script>
 <template>
-  <Status type="warning"> afdfs </Status>
+  <Layout type="no-aside">
+    content
+  </Layout>
 </template>
