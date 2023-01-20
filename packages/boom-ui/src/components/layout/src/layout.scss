@@ -1,0 +1,11 @@
+@import '../../../theme/boomui-var';
+.#{$boom-prefix}-layout {
+  display: flex;
+  align-items: center;
+  background: $boom-area;
+  color: $boom-text;      // 文本颜色
+  text-align: center;
+  line-height: 40px;
+  flex-direction: column;
+  flex: auto;
+}
