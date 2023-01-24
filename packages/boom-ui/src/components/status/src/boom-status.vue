@@ -15,7 +15,6 @@ const typeClass = computed(() => {
   if (typeStatus.includes(type)) {
     typeClassStr = `${ns.b()} ${ns.em('bg', type)}`;
   }
-  console.log(typeClassStr);
   return typeClassStr;
 });
 </script>
