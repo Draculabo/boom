@@ -3,7 +3,7 @@ import { useNamespace } from '../../../common/hooks/useNamespace';
 import { middleNum } from '../../../common/hooks/middle-num';
 import { progressProps } from './progress-types';
 import type { ISvgData } from './progress-types';
-import { reactive, ref, toRefs, watch } from 'vue';
+import { CSSProperties, reactive, ref, toRefs, watch } from 'vue';
 import './progress.scss';
 
 /* Progress attributes */
@@ -135,14 +135,14 @@ watch(
   <div v-else :class="ns.b()">
     <div :class="ns.e('circle')">
       <svg :class="ns.e('circle')" viewBox="0 0 100 100">
-        <path fill-opacity="0" :stroke-width="normalStrokeWidth" :style="data.trailPath" :d="data.pathString" />
+        <path fill-opacity="0" :stroke-width="normalStrokeWidth" :style="(data.trailPath as CSSProperties)" :d="data.pathString" />
         <path
           :d="data.pathString"
           :stroke-linecap="strokeLinecap"
           fill-opacity="0"
           :stroke="barBgColor"
           :stroke-width="normalPercentage ? normalStrokeWidth : 0"
-          :style="data.strokePath"
+          :style="(data.strokePath as CSSProperties)"
         />
       </svg>
       <slot />
