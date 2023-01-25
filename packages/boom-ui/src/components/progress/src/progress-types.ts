@@ -1,5 +1,6 @@
 import type { PropType, Ref } from 'vue';
 type ProgressStatusType = 'success' | 'warning' | 'error' | 'none';
+type StrokeLinecapType = 'butt' | 'round' | 'square' | 'inherit' | undefined;
 
 interface ISvgPath {
   stroke: Ref<string> | string;
@@ -72,7 +73,7 @@ export const progressProps = {
   },
   // 圆形进度条两端的形状 butt/round/square，round、square 比 butt 两端长一截
   strokeLinecap: {
-    type: String,
+    type: String as PropType<StrokeLinecapType>,
     default: 'round',
   },
   // 进度条文字内容
