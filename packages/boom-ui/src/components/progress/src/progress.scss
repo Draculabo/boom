@@ -1,0 +1,108 @@
+@import '../../../theme/boomui-var';
+.#{$boom-prefix}-progress {
+  width: 200px;
+}
+.#{$boom-prefix}-progress__content {
+  display: flex;
+  flex-wrap: nowrap;
+
+  .#{$boom-prefix}-progress__line {
+    width: 100%;
+    position: relative;
+    background: $boom-dividing-line;
+    overflow: hidden;
+
+    .#{$boom-prefix}-progress__bar {
+      width: 0;
+      height: 100%;
+      transition: width 0.6s ease;
+      background-color: $boom-brand;
+
+      > span {
+        display: block;
+        white-space: nowrap;
+        color: $boom-light-text;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 0 10px;
+      }
+
+      &--dynamic {
+        transform: translateZ(0);
+        animation: dynamic 3s infinite;
+      }
+
+      &--success {
+        background-color: $boom-success;
+      }
+
+      &--warning {
+        background-color: $boom-warning;
+      }
+
+      &--danger {
+        background-color: $boom-danger;
+      }
+    }
+
+    > span {
+      display: block;
+      white-space: nowrap;
+      color: $boom-light-text;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .inside {
+      text-align: center;
+    }
+
+    .inside-left {
+      text-align: left;
+    }
+
+    .inside-right {
+      text-align: right;
+    }
+  }
+
+  > span {
+    min-width: 46px;
+    padding: 0 5px;
+    text-align: center;
+  }
+}
+
+.#{$boom-prefix}-progress__circle {
+  position: relative;
+  vertical-align: middle;
+  .#{$boom-prefix}-progress__circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: $boom-text;
+    line-height: 1;
+    white-space: normal;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes dynamic {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
