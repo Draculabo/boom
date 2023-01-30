@@ -1,6 +1,6 @@
 {
   "index_name": "boom",
-  "start_urls": ["boom-ochre.vercel.app/"],
+  "start_urls": ["https://boom-ochre.vercel.app/"],
   "rateLimit": 8,
   "maxDepth": 10,
   "selectors": {
