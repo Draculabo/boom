@@ -11,6 +11,10 @@ function getComponentsSidebar() {
           text: 'Status',
           link: '/components/status',
         },
+        {
+          text: 'Button',
+          link: '/components/button',
+        },
       ],
     },
   ];

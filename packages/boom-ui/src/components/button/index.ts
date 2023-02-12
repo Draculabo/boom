@@ -11,5 +11,6 @@ export default {
        for (let component in components) {
         app.component(component,components[component])
        }
-    }
+    },
+    BoomButton
 }
