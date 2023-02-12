@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { useNamespace } from "@/common/hooks/useNamespace";
+import { useNamespace } from "../../common/hooks/useNamespace";
 import { ref, reactive, computed, useSlots, onMounted } from "vue"
 
 const ns = useNamespace('button');

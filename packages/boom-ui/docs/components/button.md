@@ -1,72 +1,111 @@
 # Button 按钮
 
-## 常用 button 按钮
-
 ## 基本使用
-
-关键词信息按钮
-
-```shell
-['success', 'error', 'initial', 'warning', 'waiting', 'running', 'invalid'];
-```
 
 button 按钮的基本使用
 
-使用type属性传递上述关键字即可得到不同颜色的按钮
 
+使用type属性  `initial` 、`success` 、 `error` 、 `warning` 、 `waiting` 、 `running` 、 `invalid`。传递上述关键字值即可得到不同颜色的按钮
+
+
+:::demo
 ```vue
 <template>
-   <boom-button type="warning">警告按钮</boom-button>
-</template>
+    <boom-button>默认按钮</boom-button>
+    <boom-button type="success">成功按钮</boom-button>
+    <boom-button type="error">错误按钮</boom-button>
+    <boom-button type="warning">警告按钮</boom-button>
+    <boom-button type="waiting">等待按钮</boom-button>
+    <boom-button type="running">运行按钮</boom-button>
+    <boom-button type="invalid">无效按钮</boom-button>
+ </template>
+ 
 ```
+:::
 
 ## 禁用状态
 
 按钮不可用状态，通过 *disabled* 属性设置实现
-
+:::demo
 ```vue
 <template>
-   <boom-button disabled>禁用按钮</boom-button>
-</template>
+    <boom-button disabled>默认按钮</boom-button>
+    <boom-button type="success" disabled>成功按钮</boom-button>
+    <boom-button type="error" disabled>错误按钮</boom-button>
+    <boom-button type="warning" disabled>警告按钮</boom-button>
+    <boom-button type="waiting" disabled>等待按钮</boom-button>
+    <boom-button type="running" disabled>运行按钮</boom-button>
+    <boom-button type="invalid" disabled>无效按钮</boom-button>
+ </template>
 ```
+:::
 
-## 带图标
+## 图标按钮
 
-#### 带图标类型的按钮，通过 leftIcon 或者 rightIcon 属性设置实现并确定 icon 出现的位置
-
-```html
+带图标类型的按钮，通过 *leftIcon* 或者 *rightIcon* 属性设置实现并确定 icon 出现的位置
+:::demo
+```vue
 <template>
-  <boom-button type="running" leftIcon="cry" >等待按钮</boom-button>
-  <boom-button type="running" rightIcon="smile">等待按钮</boom-button>
+  <boom-button type="success" leftIcon="smile" >微笑按钮</boom-button>
+  <boom-button type="error" rightIcon="cry">哭泣按钮</boom-button>
 </template>
 ```
+:::
+
+## 圆角按钮
+
+带圆角按钮，通过 *round* 属性设置实现按钮的圆角效果
+:::demo
+```vue
+<template>
+  <boom-button type="success" leftIcon="smile" round>微笑按钮</boom-button>
+  <boom-button type="error" rightIcon="cry" round>哭泣按钮</boom-button>
+</template>
+```
+:::
+
+## 圆形按钮
+
+圆形按钮，通过 *circle* 属性设置实现圆形按钮
+:::demo
+```vue
+<template>
+  <boom-button leftIcon="smile" circle></boom-button>
+  <boom-button leftIcon="cry" circle></boom-button>
+</template>
+```
+:::
 
 ## 加载状态
 
 正在加载中的状态按钮，通过 *loading* 属性设置实现
-
-```html
-<template>
-  <boom-button type="success" loading>成功按钮</boom-button>
-</template>
-```
-
-## 不同大小
-
-不同大小类型的按钮，通过 *size* 属性设置实现
-
+:::demo
 ```vue
 <template>
-  <boom-button type="success" size='large'>成功按钮</boom-button>
+  <boom-button type="waiting" loading>加载中</boom-button>
 </template>
 ```
+:::
 
+## 按钮尺寸
+
+不同尺寸类型的按钮，通过 *size* 属性设置实现
+:::demo
+```vue
+<template>
+  <boom-button type="success" size='large'>大按钮</boom-button>
+  <boom-button type="success">默认按钮</boom-button>
+  <boom-button type="success" size='medium'>中按钮</boom-button>
+  <boom-button type="success" size='small'>小按钮</boom-button>
+</template>
+```
+:::
 ## Attributes
 
 | 参数      | 说明                         | 类型    | 可选值                                                       | 默认值 |
 | --------- | ---------------------------- | ------- | ------------------------------------------------------------ | ------ |
-| type      | 类型                         | string  | succes / error / initial / warning / waiting / running / invalid | —      |
-| size      | 尺寸                         | string  | large / medium / small                                       | —      |
+| type      | 类型                         | string  | initial / succes / error /  warning / waiting / running / invalid | initial      |
+| size      | 尺寸                         | string  | default / large / medium / small                                       | default      |
 | round     | 是否圆角按钮                 | boolean | —                                                            | false  |
 | circle    | 是否圆形按钮                 | boolean | —                                                            | false  |
 | loading   | 是否加载中状态               | boolean | —                                                            | false  |

@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import iconList from '@/iconfont/iconfont.json';
+import iconList from '../../iconfont/iconfont.json';
 
 const keywords = ref('')
 const iconData = ref(iconList.glyphs)
