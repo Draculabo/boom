@@ -1,0 +1,122 @@
+@import '../../theme/boomui-var.scss';
+
+// 定义样式命名空间 示例
+// const ns = useNamespace('table')
+// ns.b() 等价于 boomui-table
+// ns.e('hello') 等价于 boomui-table__hello
+// ns.m('hello') 等价于 boomui-table--hello
+// ns.em('hello','world') 等价于 boomui-table__hello--world
+// const typeStatus = ['success', 'error', 'initial', 'warning', 'waiting', 'running', 'invalid'];
+@mixin bbgColor ($color: $boom-initial, $fontColor: #fff) {
+    background-color: $color;
+    color: $fontColor;
+}
+
+// 按钮尺寸
+@mixin bsize($padding: 10px 20px, $font: 16px) {
+    padding: $padding;
+    font-size: $font;
+    line-height: $font;
+}
+
+.#{$boom-prefix}-button {
+    border: 0;
+    outline: none;
+    line-height: 1;
+    @include bsize;
+    cursor: pointer;
+    margin: 5px;
+
+    span {
+        display: flex;
+        justify-content: center;
+    }
+
+    // type样式
+    &__success {
+        @include bbgColor($boom-success);
+    }
+
+    &__error {
+        @include bbgColor($boom-danger);
+    }
+
+    &__initial {
+        @include bbgColor($boom-initial, #000);
+    }
+
+    &__warning {
+        @include bbgColor($boom-warning);
+    }
+
+    &__waiting {
+        @include bbgColor($boom-waiting);
+    }
+
+    &__running {
+        @include bbgColor($boom-info);
+    }
+
+    &__invalid {
+        @include bbgColor($boom-dividing-line);
+    }
+
+    &:hover,
+    &:focus {
+        opacity: .6;
+    }
+
+    // disabled属性
+    &__disabled {
+        opacity: .4;
+        cursor: no-drop;
+
+        &:hover,
+        &:focus {
+            opacity: .4;
+        }
+    }
+
+    // 元素尺寸
+    &__large {
+        @include bsize(12px 22px, 18px)
+    }
+
+    &__medium {
+        @include bsize(8px 18px, 14px)
+    }
+
+    &__small {
+        @include bsize(6px 16px, 12px)
+    }
+
+    // 圆角相关
+    &__round {
+        border-radius: 20px;
+    }
+
+    // 圆圈相关
+    &__circle {
+        padding: 10px 12px;
+        border-radius: 50%;
+    }
+}
+// 加载中动画
+.icon-loading{
+    display: inline-block;
+    margin-right:5px;
+    animation: rotating 2s linear infinite;
+    -webkit-animation: rotating 2s linear infinite;
+  }
+  
+  @keyframes rotating {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

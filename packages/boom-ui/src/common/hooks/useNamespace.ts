@@ -35,3 +35,9 @@ export function useNamespace(block: string, needDot = false): UseNamespace {
     em,
   };
 }
+// 定义样式命名空间 示例
+// const ns = useNamespace('table')
+// ns.b() 等价于 boomui-table
+// ns.e('hello') 等价于 boomui-table__hello
+// ns.m('hello') 等价于 boomui-table--hello
+// ns.em('hello','world') 等价于 boomui-table__hello--world
