@@ -3,6 +3,8 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
+    // 解析json文件
+    "resolveJsonModule": true,
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
@@ -33,6 +35,6 @@
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.vue",
+    "src/**/*.vue", "src/iconfont/iconfont.json",
   ],
 }

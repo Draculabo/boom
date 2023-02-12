@@ -1,9 +1,9 @@
-import BoomButton from './BoomButton.vue'
+import BoomIcon from './BoomIcon.vue'
 interface BoomCompo {
     [compoName:string] : any;
 } 
 const components:BoomCompo ={
-    'boom-button':BoomButton
+    'boom-icon':BoomIcon
 }
 // 全局注册
 export default {

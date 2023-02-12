@@ -54,3 +54,7 @@ $boom-primary-bg: var(--boom-primary-bg, #f2f5fc); // 主要底色
 
 $boom-default-line: var(--boom-default-line, #5e7ce0); // 默认边框
 $boom-default-bg: var(--boom-default-bg, #f3f6f8); // 默认底色
+// 默认字体颜色
+$boom-default-font-color: var(--default-font-color, #000);
+// 白色字体颜色
+$boom-white-font-color: var(--white-font-color, #fff);

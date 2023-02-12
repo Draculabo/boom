@@ -1,9 +1,9 @@
-import BoomButton from './BoomButton.vue'
+import BoomTable from './BoomTable.vue'
 interface BoomCompo {
     [compoName:string] : any;
 } 
 const components:BoomCompo ={
-    'boom-button':BoomButton
+    'boom-table':BoomTable
 }
 // 全局注册
 export default {
