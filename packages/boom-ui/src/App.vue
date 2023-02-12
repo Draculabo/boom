@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Status from './components/status';
 import BoomProgress from './components/progress';
+import BoomButton from './components/button';
 // 导入假数据
 import {tableData,editData} from './assets/mockData'
 const typeStatus = ['success', 'error', 'initial', 'warning', 'waiting', 'running', 'invalid'];
