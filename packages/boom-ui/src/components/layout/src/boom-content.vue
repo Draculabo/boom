@@ -2,19 +2,20 @@
 import { computed, PropType } from 'vue';
 import { useNamespace } from '../../../common/hooks/useNamespace';
 import './layout.scss';
-import { LayoutType } from './layout-types';
+import { ContentType } from './layout-types';
 const props = defineProps({
-  type: { type: String as PropType<LayoutType>, default: 'no-aside' },
+  type: { type: String as PropType<ContentType>, default: 'center' },
 });
-const ns = useNamespace('layout');
+const ns = useNamespace('content');
 
 const typeClass = computed(() => {
   const { type } = props;
-  const typeLyaout = ['normal', 'left-aside', 'right-aside', 'header', 'header-left-aside', 'header-right-aside'];
+  const typeLyaout = ['center', 'left', 'right'];
   let typeClassStr = `${ns.b()} ${ns.em('bg', 'invalid')}`;
   if (typeLyaout.includes(type)) {
     typeClassStr = `${ns.b()} ${ns.em('bg', type)}`;
   }
+  console.log(typeClassStr);
   return typeClassStr;
 });
 </script>

@@ -3,24 +3,73 @@ import { computed, PropType } from 'vue';
 import { useNamespace } from '../../../common/hooks/useNamespace';
 import './layout.scss';
 import { AsideType } from './layout-types';
+import { menu } from './menu';
 const props = defineProps({
   type: { type: String as PropType<AsideType>, default: 'one-level' },
 });
 const ns = useNamespace('aside');
 
+// 计算侧边栏样式
 const typeClass = computed(() => {
   const { type } = props;
-  const typeLyaout = ['one-level', 'two-level', 'foldable', 'hide-able'];
+  const typeAside = ['one-level', 'two-levels', 'foldable'];
   let typeClassStr = `${ns.b()} ${ns.em('bg', 'invalid')}`;
-  if (typeLyaout.includes(type)) {
+  if (typeAside.includes(type)) {
     typeClassStr = `${ns.b()} ${ns.em('bg', type)}`;
   }
   console.log(typeClassStr);
   return typeClassStr;
 });
+
+// 点击隐藏或显示二级菜单
+const showSubMenu = (index: number) => {
+  // 判断当前点击的菜单项是否拥有子菜单
+  if (menu[index].sub_menu?.length > 0) {
+    // 更改href内容，使拥有子菜单的菜单项点击后不会发生跳转，且不会回到页面开头
+    menu[index].src = 'javascript:void(0);';
+    // 子菜单未展开，则改变菜单项和子菜单项属性，将子菜单展开
+    if (!menu[index].className.open && menu[index].className.close) {
+      // 更改当前菜单项样式，使箭头图标朝下
+      menu[index].className.open = true;
+      menu[index].className.close = false;
+      // 更改所有子菜单项样式，使其出现
+      for (let i = 0; i < menu[index].sub_menu?.length; i++) {
+        menu[index].sub_menu[i].className.show = true;
+        menu[index].sub_menu[i].className.hide = false;
+      }
+    } else {
+      // 更改当前菜单项样式，使箭头图标朝左
+      menu[index].className.open = false;
+      menu[index].className.close = true;
+      for (let i = 0; i < menu[index].sub_menu?.length; i++) {
+        // 更改所有子菜单项样式，使其隐藏
+        menu[index].sub_menu[i].className.show = false;
+        menu[index].sub_menu[i].className.hide = true;
+      }
+    }
+  }
+};
 </script>
 <template>
-  <ul :class="typeClass">
+  <div id="boom-aside" :class="typeClass">
+    <ul v-for="(menu_item, index) in menu" :key="menu_item.id">
+      <li name="menu_item" :class="menu_item.className">
+        <a :href="menu_item.src" @click="showSubMenu(index)">
+          {{ menu_item.name }}
+        </a>
+      </li>
+      <ul v-for="sub_menu_item in menu_item.sub_menu" :key="sub_menu_item.id">
+        <li
+          v-if="typeClass == 'boomui-aside boomui-aside__bg--two-levels' || 'boomui-aside boomui-aside__bg--foldable'"
+          name="sub_menu_item"
+          :class="sub_menu_item.className"
+        >
+          <a :href="sub_menu_item.src">
+            {{ sub_menu_item.name }}
+          </a>
+        </li>
+      </ul>
+    </ul>
     <slot />
-  </ul>
+  </div>
 </template>
