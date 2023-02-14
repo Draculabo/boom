@@ -18,6 +18,7 @@ const typeClass = computed(() => {
   return typeClassStr;
 });
 </script>
+
 <template>
   <span :class="typeClass"><slot /></span>
 </template>

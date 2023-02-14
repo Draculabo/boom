@@ -1,0 +1,55 @@
+@import '../../../theme/boomui-var';
+
+.switch-box {
+  margin: 2px;
+  width: 40px;
+
+  .switch {
+    /* 隐藏checkbox默认样式 */
+    display: none;
+  }
+
+  label {
+    /* 通过label扩大点击热区 */
+    position: relative;
+    display: block;
+    margin: 1px;
+    height: 20px;
+    cursor: pointer;
+
+    &::before {
+      /* before设置前滚动小圆球 */
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -8px;
+      margin-left: -8px;
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      background-color: #ffffff;
+      box-shadow: 1px 1px 1px 1px $boom-shadow;
+      transform: translateX(-9px);
+      transition: all 0.3s ease;
+    }
+
+    &::after {
+      /* after设置滚动前背景色 */
+      content: '';
+      display: block;
+      border-radius: 10px;
+      height: 20px;
+      background-color: $boom-global-bg;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.switch-box .switch:checked ~ label::before {
+  transform: translateX(9px);
+}
+
+.switch-box .switch:checked ~ label::after {
+  background-color: $boom-brand;
+}
