@@ -1,0 +1,47 @@
+@import "../../../theme/boomui-var.scss";
+.#{$boom-prefix}-avatar {
+	display: inline-block;
+	position: relative;
+	margin: 3px;
+	&--small {
+		width: 32px;
+		height: 32px;
+	}
+	&--default {
+		width: 42px;
+		height: 42px;
+	}
+	&--large {
+		width: 54px;
+		height: 54px;
+	}
+	&__icon {
+		background-color:$boom-gray-80;
+		border-radius: 50%;
+	}
+	&__string {
+		background-color:$boom-gray-70;
+		border-radius: 50%;
+		font-size: 20px;
+		font-family: -apple-system,system-ui,
+		Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,
+		sans-serif,BlinkMacSystemFont,Helvetica Neue,PingFang 
+		SC,Hiragino Sans GB,Microsoft YaHei,Arial;
+		text-align: center;
+		span {
+			box-sizing: border-box;
+			display: block;
+			left: 50%;
+			line-height: 40px;
+			transform-origin: 0 center;
+			justify-content: center;
+			position: absolute;
+		}
+	}
+
+
+}
+img {
+	width: 100%;
+	height: 100%;
+}

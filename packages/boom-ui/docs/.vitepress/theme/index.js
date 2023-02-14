@@ -6,6 +6,7 @@ import Status from '../../../src/components/status';
 import BoomButton from '../../../src/components/button';
 import BoomIcon from '../../../src/components/icon';
 import BoomSwitch from '../../../src/components/switch';
+import BoomAvatar from '../../../src/components/avatar'
 export default {
   ...DefaultTheme,
   enhanceApp(ctx) {
@@ -15,5 +16,6 @@ export default {
     ctx.app.component(BoomButton.name, BoomButton);
     ctx.app.component(BoomIcon.name, BoomIcon);
     ctx.app.component(BoomSwitch.name, BoomSwitch);
+    ctx.app.component(BoomAvatar.name, BoomAvatar);
   },
 };

@@ -5,7 +5,7 @@ export default {
 function getComponentsSidebar() {
   return [
     {
-      text: '反馈',
+      text: 'Basic 基础组件',
       items: [
         {
           text: 'Status',
@@ -16,9 +16,21 @@ function getComponentsSidebar() {
           link: '/components/button',
         },
         {
+          text: 'Link',
+          link: '/components/link',
+        },
+        {
           text: 'Switch',
           link: '/components/switch',
         },
+        {
+          text: 'Space',
+          link: '/components/space',
+        },
+        {
+          text: 'Avatar',
+          link: '/components/avatar',
+        }
       ],
     },
   ];
