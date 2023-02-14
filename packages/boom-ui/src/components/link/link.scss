@@ -1,0 +1,70 @@
+@import '../../theme/boomui-var.scss';
+
+@mixin fontColor ($color: $boom-initial) {
+    color: $color;
+}
+
+.#{$boom-prefix}-link{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    position: relative;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 5px;
+    // type样式
+    &__success {
+        @include fontColor($boom-success);
+    }
+
+    &__error {
+        @include fontColor($boom-danger);
+    }
+
+    &__initial {
+        @include fontColor($boom-initial);
+    }
+
+    &__warning {
+        @include fontColor($boom-warning);
+    }
+
+    &__waiting {
+        @include fontColor($boom-waiting);
+    }
+
+    &__running {
+        @include fontColor($boom-info);
+    }
+
+    &__invalid {
+        @include fontColor($boom-dividing-line);
+    }
+    &:hover {
+        opacity: .8;
+        text-decoration: underline;
+    }
+    &__disabled {
+        cursor: default;
+        // 不可点击
+        pointer-events: none;
+        opacity: .6;
+        &:hover {
+            opacity: .6;
+            text-decoration: none;
+        }
+    }
+    &__nounderline{
+        &:hover{
+            text-decoration: none;
+        }
+    }
+  }
+
+

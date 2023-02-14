@@ -15,6 +15,10 @@ function getComponentsSidebar() {
           text: 'Button',
           link: '/components/button',
         },
+        {
+          text: 'Link',
+          link: '/components/link',
+        },
       ],
     },
   ];
