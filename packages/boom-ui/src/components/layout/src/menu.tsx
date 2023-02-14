@@ -1,6 +1,6 @@
 import { reactive } from 'vue';
 // 定义菜单
-export const menu = reactive([
+export const defaultMenu = reactive([
   {
     id: 0,
     name: 'first-item',

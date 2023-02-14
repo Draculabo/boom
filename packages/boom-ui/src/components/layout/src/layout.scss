@@ -8,7 +8,7 @@ body {
   display: inline-block;
   z-index: -1;
   align-items: center;
-  background: $boom-area;
+  background: $boom-global-bg-normal;
   color: $boom-text;      // 文本颜色
   text-align: center;
   flex-direction: column;
@@ -18,10 +18,29 @@ body {
 }
 
 .#{$boom-prefix}-layout.#{$boom-prefix}-layout__bg {
-  &--normal,
+  &--normal {
+    .#{$boom-prefix}-aside {
+      display: none;
+    }
+    .#{$boom-prefix}-header {
+      display: none;
+    }
+    .#{$boom-prefix}-content {
+      margin: 0% 10%;
+    }
+  }
+
   &--header {
     .#{$boom-prefix}-aside {
       display: none;
+    }
+  }
+
+  &--header,
+  &--header-left-aside,
+  &--header-right-aside {
+    .#{$boom-prefix}-aside, .#{$boom-prefix}-content {
+      margin-top: 60px;
     }
   }
 
@@ -29,9 +48,6 @@ body {
   &--right-aside {
     .#{$boom-prefix}-header {
       display: none;
-    }
-    .#{$boom-prefix}-aside, .#{$boom-prefix}-content {
-      margin-top: 0;
     }
   }
 
@@ -56,6 +72,73 @@ body {
   }
 }
 
+.#{$boom-prefix}-content {    // 被访问链接颜色未决定，invert颜色未完善
+  display: inline-block;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 70%;
+  min-height: 89.5%;
+  color: $boom-text;
+  background: $boom-global-bg;
+  line-height: 40px;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: auto;
+  padding: 0% 5% 5%;
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    list-style-type: none;
+
+    li {
+      margin: 10px;
+    }
+  }
+
+  a:link {
+    color: $boom-link;
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: $boom-link;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: $boom-link-active;
+  }
+
+  a:active {
+    text-decoration: none;
+    color: $boom-link-active;
+  }
+}
+
+.#{$boom-prefix}-content.#{$boom-prefix}-content__bg {
+  &--center {
+    text-align: center;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}
+
 .#{$boom-prefix}-header {    // 被访问链接颜色未决定，invert颜色未完善
   display: flex;
   position: fixed;
@@ -63,7 +146,7 @@ body {
   align-items: center;
   background: $boom-block;
   text-align: center;
-  line-height: 40px;
+  line-height: 60px;
   width: 100%;
   flex-direction: row;
   justify-content: flex-start;
@@ -142,7 +225,7 @@ body {
   }
 }
 
-.#{$boom-prefix}-aside {    // 被访问链接颜色未决定，invert颜色未完善
+.#{$boom-prefix}-aside {
   display: inline-flex;
   position: fixed;
   z-index: 1;
@@ -152,7 +235,6 @@ body {
   flex-direction: column;
   flex: auto;
   padding-inline-start: 0;
-  margin-top: 60px;
   width: 200px;
 
   ul {
@@ -235,72 +317,5 @@ body {
 .open {
   ::after {
     transform: rotate(-90deg);
-  }
-}
-
-.#{$boom-prefix}-content {    // 被访问链接颜色未决定，invert颜色未完善
-  display: inline-block;
-  position: relative;
-  z-index: 0;
-  margin-top: 60px;
-  left: 0;
-  top: 0;
-  width: auto;
-  color: $boom-text;
-  line-height: 40px;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex: auto;
-  padding: 0% 5% 5%;
-
-  p {
-    margin: 0;
-  }
-
-  ul {
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    flex: auto;
-    list-style-type: none;
-
-    li {
-      margin: 10px;
-    }
-  }
-
-  a:link {
-    color: $boom-link;
-    text-decoration: none;
-  }
-
-  a:visited {
-    text-decoration: none;
-    color: $boom-link;
-  }
-
-  a:hover {
-    text-decoration: underline;
-    color: $boom-link-active;
-  }
-
-  a:active {
-    text-decoration: none;
-    color: $boom-link-active;
-  }
-}
-
-.#{$boom-prefix}-content.#{$boom-prefix}-content__bg {
-  &--center {
-    text-align: center;
-    background: $boom-global-bg;
-  }
-
-  &--left {
-    text-align: left;
-  }
-
-  &--right {
-    text-align: right;
   }
 }

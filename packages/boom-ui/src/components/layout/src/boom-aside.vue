@@ -1,11 +1,25 @@
 <script setup lang="ts">
-import { computed, PropType } from 'vue';
+import { computed, PropType, reactive } from 'vue';
 import { useNamespace } from '../../../common/hooks/useNamespace';
 import './layout.scss';
 import { AsideType } from './layout-types';
-import { menu } from './menu';
+import { defaultMenu } from './menu';
+export interface MenuItem {
+  id: number;
+  name: string;
+  src: string; // 跳转的href
+  className: {
+    open: boolean; // 为true时具有朝下的箭头图标
+    close: boolean; // 为true时具有朝左的箭头图标
+    show: boolean; // 显示当前菜单项
+    hide: boolean; // 隐藏当前菜单项
+  };
+  sub_menu: MenuItem[]; // 子菜单项内容
+}
+
 const props = defineProps({
   type: { type: String as PropType<AsideType>, default: 'one-level' },
+  data: { type: Object as PropType<MenuItem[]>, default: defaultMenu },
 });
 const ns = useNamespace('aside');
 
@@ -21,9 +35,19 @@ const typeClass = computed(() => {
   return typeClassStr;
 });
 
+// const { data } = props;
+// const emits = defineEmits<{
+
+//  (e: 'changeMenu', value: object): void
+
+//  }>()
+
+const menu = reactive(props.data);
+
 // 点击隐藏或显示二级菜单
 const showSubMenu = (index: number) => {
   // 判断当前点击的菜单项是否拥有子菜单
+
   if (menu[index].sub_menu?.length > 0) {
     // 更改href内容，使拥有子菜单的菜单项点击后不会发生跳转，且不会回到页面开头
     menu[index].src = 'javascript:void(0);';
@@ -48,11 +72,12 @@ const showSubMenu = (index: number) => {
       }
     }
   }
+  // emits('changeMenu', menu);
 };
 </script>
 <template>
   <div id="boom-aside" :class="typeClass">
-    <ul v-for="(menu_item, index) in menu" :key="menu_item.id">
+    <ul v-for="(menu_item, index) in props.data" :key="menu_item.id">
       <li name="menu_item" :class="menu_item.className">
         <a :href="menu_item.src" @click="showSubMenu(index)">
           {{ menu_item.name }}
