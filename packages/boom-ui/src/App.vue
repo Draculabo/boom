@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import Layout, { Header, Aside, Content } from './components/layout';
+import Layout from './components/layout';
+import Content from './components/layout/src/content';
+import Aside from './components/layout/src/aside';
+import Header from './components/layout/src/header';
 import { reactive } from 'vue';
 const menu = reactive([
   {
