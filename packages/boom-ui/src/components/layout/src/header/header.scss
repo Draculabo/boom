@@ -1,0 +1,87 @@
+@import '../../../../theme/boomui-var';
+
+.#{$boom-prefix}-header {    // 被访问链接颜色未决定，invert颜色未完善
+  display: flex;
+  position: fixed;
+  z-index: 2;
+  align-items: center;
+  background: $boom-block;
+  text-align: center;
+  line-height: 60px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: auto;
+
+  ul {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    list-style-type: none;
+
+    li {
+      margin-left: 20px;
+    }
+  }
+
+  a:link {
+    color: $boom-link;
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: $boom-link;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: $boom-link-active;
+  }
+
+  a:active {
+    text-decoration: none;
+    color: $boom-link-active;
+  }
+}
+
+.#{$boom-prefix}-header.#{$boom-prefix}-header__bg {
+  &--inside-shadow {
+    box-shadow: 0 -8px 15px $boom-light-shadow inset;  // 有下方内投影
+  }
+
+  &--outside-shadow {
+    box-shadow: 0 8px 10px $boom-light-shadow;   // 有下方外投影
+  }
+
+  &--border-bottom {
+    border-bottom: 5px solid $boom-brand;  // 有下边框
+  }
+
+  &--invert {
+    background: $boom-brand;
+
+    a:link {
+      color: $boom-block;
+      text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: $boom-block;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: $boom-link-active;
+    }
+
+    a:active {
+      text-decoration: none;
+      color: $boom-link-active;
+    }
+
+    // 文字与背景颜色对调
+  }
+}

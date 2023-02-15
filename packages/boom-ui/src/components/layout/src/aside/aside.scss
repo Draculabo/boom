@@ -1,0 +1,96 @@
+@import '../../../../theme/boomui-var';
+
+.#{$boom-prefix}-aside {
+  display: inline-flex;
+  position: fixed;
+  z-index: 1;
+  align-items: flex-start;
+  background: $boom-block;
+  text-align: left;
+  flex-direction: column;
+  flex: auto;
+  padding-inline-start: 0;
+  width: 200px;
+
+  ul {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    list-style-type: none;
+    padding-inline-start: 10px;
+
+    li {
+      margin: 10px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:link,
+  :visited {
+    color: $boom-link;
+  }
+
+  a:hover,
+  :active {
+    color: $boom-link-active;
+  }
+}
+
+.#{$boom-prefix}-aside.#{$boom-prefix}-aside__bg {
+  &--two-levels {
+    li {
+      display: block;
+    }
+
+    .open,
+    .close {
+      ::after {
+        display: none;
+      }
+    }
+  }
+}
+
+// Aside：隐藏或显示侧边栏子菜单项
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+// 图标导入
+@font-face {
+  font-family: iconfont; /* Project id 3891228 */
+  src:
+    url('//at.alicdn.com/t/c/font_3891228_yd2ex5uly9.woff2?t=1676137363555') format('woff2'),
+    url('//at.alicdn.com/t/c/font_3891228_yd2ex5uly9.woff?t=1676137363555') format('woff'),
+    url('//at.alicdn.com/t/c/font_3891228_yd2ex5uly9.ttf?t=1676137363555') format('truetype');
+}
+
+// 展开子菜单项同时，箭头图标的变化; 以及点击后页面不会产生变动
+.open,
+.close {
+  ::after {
+    content: '\e62d';
+    font-family: iconfont !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    margin: 5px;
+    transition: ease-in-out 0.3s;
+  }
+}
+
+.open {
+  ::after {
+    transform: rotate(-90deg);
+  }
+}

@@ -11,4 +11,5 @@ export function useComponents(app) {
   // app.component('boom-icon', BoomIcon);
   app.component('Demo', Demo);
   app.component('DemoBlock', DemoBlock);
+  app.component('Layout', Layout);
 }

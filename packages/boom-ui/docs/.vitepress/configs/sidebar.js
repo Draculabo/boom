@@ -15,6 +15,11 @@ function getComponentsSidebar() {
           text: 'Button',
           link: '/components/button',
         },
+      ],
+    },
+    {
+      text: '布局',
+      items: [
         {
           text: 'Layout',
           link: '/components/layout',
