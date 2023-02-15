@@ -35,13 +35,6 @@ const typeClass = computed(() => {
   return typeClassStr;
 });
 
-// const { data } = props;
-// const emits = defineEmits<{
-
-//  (e: 'changeMenu', value: object): void
-
-//  }>()
-
 const menu = reactive(props.data);
 
 // 点击隐藏或显示二级菜单
@@ -72,7 +65,6 @@ const showSubMenu = (index: number) => {
       }
     }
   }
-  // emits('changeMenu', menu);
 };
 </script>
 <template>
