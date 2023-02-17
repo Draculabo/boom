@@ -70,7 +70,7 @@ const showSubMenu = (index: number) => {
 <template>
   <div id="boom-aside" :class="typeClass">
     <ul v-for="(menu_item, index) in props.data" :key="menu_item.id">
-      <li name="menu_item" :class="menu_item.className">
+      <li id="menu-item" :class="menu_item.className">
         <a :href="menu_item.src" @click="showSubMenu(index)">
           {{ menu_item.name }}
         </a>
@@ -78,7 +78,7 @@ const showSubMenu = (index: number) => {
       <ul v-for="sub_menu_item in menu_item.sub_menu" :key="sub_menu_item.id">
         <li
           v-if="typeClass == 'boomui-aside boomui-aside__bg--two-levels' || 'boomui-aside boomui-aside__bg--foldable'"
-          name="sub_menu_item"
+          id="sub-menu-item"
           :class="sub_menu_item.className"
         >
           <a :href="sub_menu_item.src">

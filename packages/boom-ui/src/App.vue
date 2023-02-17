@@ -83,22 +83,20 @@ const menu = reactive([
 <template>
   <Layout type="header-left-aside">
     <Header type="invert">
-      <!-- <img src="" alt="logo" />
+      <img src="" alt="logo" />
       <ul>
         <li><a href="#">首页</a></li>
         <li><a href="#">个人主页</a></li>
-      </ul> -->
-      导航栏
+      </ul>
     </Header>
     <Aside type="foldable" :data="menu">
-      侧边栏
       <!-- <ul>
         <li><a href="#">首页</a></li>
         <li><a href="#">个人主页</a></li>
       </ul> -->
     </Aside>
     <Content type="center">
-      <!-- <h1>TEST TITLE</h1>
+      <h1>TEST TITLE</h1>
       <p>
         test width test width test width test width test width test width test width test width test width test width test width test width
         test width test width test width test width test width
@@ -131,7 +129,7 @@ const menu = reactive([
       <p>test height</p>
       <p>test height</p>
       <p>test height</p>
-      <p>test height</p> -->
+      <p>test height</p>
       默认布局
     </Content>
   </Layout>

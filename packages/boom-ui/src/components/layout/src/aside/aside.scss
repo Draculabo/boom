@@ -1,7 +1,7 @@
 @import '../../../../theme/boomui-var';
 
 .#{$boom-prefix}-aside {
-  display: inline-flex;
+  // display: inline-flex;
   position: fixed;
   z-index: 1;
   align-items: flex-start;
@@ -10,7 +10,7 @@
   flex-direction: column;
   flex: auto;
   padding-inline-start: 0;
-  width: 200px;
+  width: 15%;
 
   ul {
     margin: 0;
@@ -41,6 +41,23 @@
 }
 
 .#{$boom-prefix}-aside.#{$boom-prefix}-aside__bg {
+  &--one-level {
+    li {
+      display: block;
+    }
+
+    #sub-menu-item {
+      display: none;
+    }
+
+    .open,
+    .close {
+      ::after {
+        display: none;
+      }
+    }
+  }
+
   &--two-levels {
     li {
       display: block;

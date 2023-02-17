@@ -1,3 +1,3 @@
-import BoomContent from './boom-content.vue';
-export default BoomContent;
+import Content from './boom-content.vue';
+export default Content;
 export * from './content-types';

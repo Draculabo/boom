@@ -3,7 +3,7 @@ import { reactive } from 'vue';
 export const defaultMenu = reactive([
   {
     id: 0,
-    name: 'first-item',
+    name: '第一项',
     src: 'https://www.bytedance.com/', // 跳转的href
     className: {
       open: false, // 为true时具有朝下的箭头图标
@@ -15,7 +15,7 @@ export const defaultMenu = reactive([
   },
   {
     id: 1,
-    name: 'second-item',
+    name: '第二项',
     src: '#',
     className: {
       open: false,
@@ -27,7 +27,7 @@ export const defaultMenu = reactive([
   },
   {
     id: 2,
-    name: 'third-item',
+    name: '第三项',
     src: '#',
     className: {
       open: false,
@@ -38,7 +38,7 @@ export const defaultMenu = reactive([
     sub_menu: [
       {
         id: 0,
-        name: 'first-sub-item',
+        name: '第一子项',
         src: '#',
         className: {
           open: false,
@@ -50,7 +50,7 @@ export const defaultMenu = reactive([
       },
       {
         id: 1,
-        name: 'second-sub-item',
+        name: '第二子项',
         src: '#',
         className: {
           open: false,
@@ -62,7 +62,7 @@ export const defaultMenu = reactive([
       },
       {
         id: 2,
-        name: 'third-sub-item',
+        name: '第三子项',
         src: '#',
         className: {
           open: false,
