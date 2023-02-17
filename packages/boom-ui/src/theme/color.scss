@@ -54,3 +54,12 @@ $boom-primary-bg: var(--boom-primary-bg, #f2f5fc); // 主要底色
 
 $boom-default-line: var(--boom-default-line, #5e7ce0); // 默认边框
 $boom-default-bg: var(--boom-default-bg, #f3f6f8); // 默认底色
+
+// layout 颜色均取自上方
+$boom-global-bg-normal: var(--boom-global-bg-normal, #ffffff); // Layout全局白色背景
+$boom-text: var(--boom-text, #252b3a); // 布局Layout内，以及正文容器Content内文本颜色
+$boom-block: var(--boom-block, #ffffff); // 默认的导航栏Header和侧边栏Aside背景色，以及反色导航栏的链接文本颜色
+$boom-link: var(--boom-link, #526ecc); // 导航栏Header和侧边栏Aside内各项的链接文本颜色
+$boom-link-active: var(--boom-link-active, #344899); // 导航栏Header和侧边栏Aside内各项的链接文本悬停/激活颜色
+$boom-brand: var(--boom-brand, #5e7ce0); // 反色导航栏背景色
+$boom-light-shadow: var(--boom-light-shadow, rgb(0 0 0 / 10%)); // 有阴影导航栏的阴影色

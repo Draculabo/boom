@@ -36,6 +36,7 @@
 
   a:hover,
   :active {
+    text-decoration: underline;
     color: $boom-link-active;
   }
 }

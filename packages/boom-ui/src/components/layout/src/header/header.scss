@@ -26,23 +26,15 @@
     }
   }
 
-  a:link {
+  a:link,
+  :visited {
     color: $boom-link;
     text-decoration: none;
   }
 
-  a:visited {
-    text-decoration: none;
-    color: $boom-link;
-  }
-
-  a:hover {
+  a:hover,
+  :active {
     text-decoration: underline;
-    color: $boom-link-active;
-  }
-
-  a:active {
-    text-decoration: none;
     color: $boom-link-active;
   }
 }
@@ -60,29 +52,19 @@
     border-bottom: 5px solid $boom-brand;  // 有下边框
   }
 
-  &--invert {
+  &--invert {                  // 文字与背景颜色对调
     background: $boom-brand;
 
-    a:link {
+    a:link,
+    :visited {
       color: $boom-block;
       text-decoration: none;
     }
 
-    a:visited {
-      text-decoration: none;
-      color: $boom-block;
-    }
-
-    a:hover {
+    a:hover,
+    :active {
       text-decoration: underline;
       color: $boom-link-active;
     }
-
-    a:active {
-      text-decoration: none;
-      color: $boom-link-active;
-    }
-
-    // 文字与背景颜色对调
   }
 }
