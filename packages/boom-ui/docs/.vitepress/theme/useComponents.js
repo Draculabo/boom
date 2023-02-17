@@ -4,6 +4,7 @@ import Status from '../../../src/components/status';
 import BoomButton from '../../../src/components/button';
 import BoomIcon from '../../../src/components/icon';
 import BoomSwitch from '../../../src/components/switch';
+import BoomAvatar from '../../../src/components/avatar';
 export function useComponents(app) {
   app.component('Status', Status);
   app.component('boom-button', BoomButton);
@@ -11,4 +12,5 @@ export function useComponents(app) {
   app.component('Demo', Demo);
   app.component('DemoBlock', DemoBlock);
   app.component('boom-switch', BoomSwitch);
+  app.component('boom-avatar', BoomAvatar);
 }
