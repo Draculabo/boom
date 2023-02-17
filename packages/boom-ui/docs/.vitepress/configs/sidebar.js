@@ -19,6 +19,10 @@ function getComponentsSidebar() {
           text: 'Switch',
           link: '/components/switch',
         },
+        {
+          text: 'Avatar',
+          link: '/components/avatar',
+        }
       ],
     },
   ];

@@ -4,6 +4,7 @@ import BoomProgress from './components/progress';
 import BoomButton from './components/button';
 import BoomIcon from './components/icon';
 import BoomSwitch from './components/switch';
+import BoomAvatar from './components/avatar'
 // 导入假数据
 import { tableData, editData } from './assets/mockData';
 
@@ -32,6 +33,6 @@ watch(res, (newVal, oldVal) => {
   <boom-button type="running" left-icon="cry" circle />
   <boom-button type="running" loading left-icon="cry"> 软件工程 </boom-button>
   <boom-switch v-model:check="res" />
-
+  <boom-avatar></boom-avatar>
   <boom-icon />
 </template>
