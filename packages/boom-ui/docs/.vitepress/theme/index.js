@@ -7,6 +7,10 @@ import Layout from '../../../src/components/layout';
 import Content from '../../../src/components/layout/src/content';
 import Aside from '../../../src/components/layout/src/aside';
 import Header from '../../../src/components/layout/src/header';
+import BoomButton from '../../../src/components/button';
+import BoomIcon from '../../../src/components/icon';
+import BoomSwitch from '../../../src/components/switch';
+import BoomAvatar from '../../../src/components/avatar'
 Content.name = 'C' + Content.name;
 export default {
   ...DefaultTheme,
@@ -18,5 +22,9 @@ export default {
     ctx.app.component(Content.name, Content);
     ctx.app.component(Aside.name, Aside);
     ctx.app.component(Header.name, Header);
+    ctx.app.component(BoomButton.name, BoomButton);
+    ctx.app.component(BoomIcon.name, BoomIcon);
+    ctx.app.component(BoomSwitch.name, BoomSwitch);
+    ctx.app.component(BoomAvatar.name, BoomAvatar);
   },
 };

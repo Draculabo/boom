@@ -24,6 +24,10 @@ function getComponentsSidebar() {
           text: 'Layout',
           link: '/components/layout',
         },
+        {
+          text: 'Avatar',
+          link: '/components/avatar',
+        }
       ],
     },
   ];

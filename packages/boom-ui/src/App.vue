@@ -1,136 +1,38 @@
 <script setup lang="ts">
-import Layout from './components/layout';
-import Content from './components/layout/src/content';
-import Aside from './components/layout/src/aside';
-import Header from './components/layout/src/header';
-import { reactive } from 'vue';
-const menu = reactive([
-  {
-    id: 0,
-    name: '第一项',
-    src: 'https://www.bytedance.com/', // 跳转的href
-    className: {
-      open: false, // 为true时具有朝下的箭头图标
-      close: false, // 为true时具有朝左的箭头图标
-      show: true, // 显示当前菜单项
-      hide: false, // 隐藏当前菜单项
-    },
-    sub_menu: [], // 子菜单项内容
-  },
-  {
-    id: 1,
-    name: '第二项',
-    src: '#',
-    className: {
-      open: false,
-      close: false,
-      show: true,
-      hide: false,
-    },
-    sub_menu: [],
-  },
-  {
-    id: 2,
-    name: '第三项',
-    src: '#',
-    className: {
-      open: false,
-      close: true, // 拥有子菜单项，需要设置为true，使箭头图标出现
-      show: true,
-      hide: false,
-    },
-    sub_menu: [
-      {
-        id: 0,
-        name: '第一子项',
-        src: '#',
-        className: {
-          open: false,
-          close: false,
-          show: false,
-          hide: true,
-        },
-        sub_menu: [],
-      },
-      {
-        id: 1,
-        name: '第二子项',
-        src: '#',
-        className: {
-          open: false,
-          close: false,
-          show: false,
-          hide: true,
-        },
-        sub_menu: [],
-      },
-      {
-        id: 2,
-        name: '第三子项',
-        src: '#',
-        className: {
-          open: false,
-          close: false,
-          show: false,
-          hide: true,
-        },
-        sub_menu: [],
-      },
-    ],
-  },
-]);
+import Status from './components/status';
+import BoomProgress from './components/progress';
+import BoomButton from './components/button';
+import BoomIcon from './components/icon';
+import BoomSwitch from './components/switch';
+import BoomAvatar from './components/avatar'
+// 导入假数据
+import { tableData, editData } from './assets/mockData';
+
+import { ref, watch } from 'vue';
+let res = ref<boolean>(true);
+
+const typeStatus = ['success', 'error', 'initial', 'warning', 'waiting', 'running', 'invalid'];
+const handleClick = () => {
+  alert(111);
+};
+
+watch(res, (newVal, oldVal) => {
+  console.log(newVal);
+});
 </script>
 <template>
-  <Layout type="header-left-aside">
-    <Header type="invert">
-      <img src="" alt="logo" />
-      <ul>
-        <li><a href="#">首页</a></li>
-        <li><a href="#">个人主页</a></li>
-      </ul>
-    </Header>
-    <Aside type="foldable" :data="menu">
-      <!-- <ul>
-        <li><a href="#">首页</a></li>
-        <li><a href="#">个人主页</a></li>
-      </ul> -->
-    </Aside>
-    <Content type="center">
-      <h1>TEST TITLE</h1>
-      <p>
-        test width test width test width test width test width test width test width test width test width test width test width test width
-        test width test width test width test width test width
-      </p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      <p>test height</p>
-      默认布局
-    </Content>
-  </Layout>
+  <Status type="warning"> afdfs </Status>
+  <boom-progress />
+  <!-- 表格组件 -->
+  <boom-table :data="tableData" table-bg-color="boom-danger" @submit="editData" />
+  <!-- 按钮组件 -->
+  <boom-button @click="handleClick"> 禁用按钮 </boom-button>
+  <boom-button type="success" left-icon="smile" right-icon="cry" @click="handleClick"> 成功按钮 </boom-button>
+  <boom-button type="warning" round> 圆角按钮 </boom-button>
+  <boom-button type="error" size="small"> 错误按钮 </boom-button>
+  <boom-button type="running" left-icon="cry" circle />
+  <boom-button type="running" loading left-icon="cry"> 软件工程 </boom-button>
+  <boom-switch v-model:check="res" />
+  <boom-avatar></boom-avatar>
+  <boom-icon />
 </template>
