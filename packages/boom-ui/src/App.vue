@@ -82,7 +82,7 @@ const menu = reactive([
 </script>
 <template>
   <Layout type="header-left-aside">
-    <Header type="invert">
+    <Header type="outside-shadow">
       <img src="" alt="logo" />
       <ul>
         <li><a href="#">首页</a></li>
