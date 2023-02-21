@@ -95,7 +95,7 @@ watch(
 </script>
 
 <template>
-  <div v-if="type === 'line'" :class="ns.b()">
+  <div v-if="type === 'line'" :class="ns.b()" style="width: 200px">
     <div :class="ns.e('content')">
       <div :class="ns.e('line')" :style="{ height, borderRadius: height }">
         <div
