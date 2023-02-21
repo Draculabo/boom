@@ -7,6 +7,10 @@ import Layout from '../../../src/components/layout';
 import Content from '../../../src/components/layout/src/content';
 import Aside from '../../../src/components/layout/src/aside';
 import Header from '../../../src/components/layout/src/header';
+import BoomButton from '../../../src/components/button';
+import BoomIcon from '../../../src/components/icon';
+import BoomSwitch from '../../../src/components/switch';
+import BoomAvatar from '../../../src/components/avatar';
 Content.name = 'C' + Content.name;
 export default {
   ...DefaultTheme,
