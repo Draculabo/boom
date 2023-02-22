@@ -9,6 +9,7 @@ import Content from '../../../src/components/layout/src/content';
 import Aside from '../../../src/components/layout/src/aside';
 import Header from '../../../src/components/layout/src/header';
 import BoomAvatar from '../../../src/components/avatar';
+import BoomProgress from '../../../src/components/progress';
 export function useComponents(app) {
   app.component('Status', Status);
   app.component('boom-button', BoomButton);
@@ -21,4 +22,5 @@ export function useComponents(app) {
   app.component('Aside', Aside);
   app.component('Header', Header);
   app.component('boom-avatar', BoomAvatar);
+  app.component('boom-progress', BoomProgress);
 }
