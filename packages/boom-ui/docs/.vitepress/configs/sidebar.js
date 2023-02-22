@@ -30,10 +30,6 @@ function getComponentsSidebar() {
         {
           text: 'Avatar',
           link: '/components/avatar',
-        },
-        {
-          text: 'Progress',
-          link: '/components/progress'
         }
       ],
     },

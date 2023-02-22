@@ -6,6 +6,10 @@ import BoomSpace from '../../../src/components/space';
 import BoomIcon from '../../../src/components/icon';
 import BoomLink from '../../../src/components/link';
 import BoomSwitch from '../../../src/components/switch';
+import Layout from '../../../src/components/layout';
+import Content from '../../../src/components/layout/src/content';
+import Aside from '../../../src/components/layout/src/aside';
+import Header from '../../../src/components/layout/src/header';
 import BoomAvatar from '../../../src/components/avatar';
 import BoomProgress from '../../../src/components/progress';
 export function useComponents(app) {
@@ -17,6 +21,10 @@ export function useComponents(app) {
   app.component('Demo', Demo);
   app.component('DemoBlock', DemoBlock);
   app.component('boom-switch', BoomSwitch);
+  app.component('Layout', Layout);
+  app.component('CContent', Content);
+  app.component('Aside', Aside);
+  app.component('Header', Header);
   app.component('boom-avatar', BoomAvatar);
   app.component('boom-progress', BoomProgress);
 }
