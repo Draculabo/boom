@@ -1,0 +1,73 @@
+@import '../../../theme/boomui-var';
+
+body {
+  margin: 0;
+}
+
+.#{$boom-prefix}-layout {
+  display: inline-block;
+  z-index: -1;
+  align-items: center;
+  background: $boom-global-bg-normal;
+  color: $boom-text;
+  text-align: center;
+  flex-direction: column;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.#{$boom-prefix}-layout.#{$boom-prefix}-layout__bg {
+  &--normal {
+    .#{$boom-prefix}-aside, .#{$boom-prefix}-header {
+      display: none;
+    }
+  }
+
+  &--header {
+    .#{$boom-prefix}-aside {
+      display: none;
+    }
+  }
+
+  &--normal,
+  &--header {
+    .#{$boom-prefix}-content {
+      margin: 0% 7%;
+    }
+  }
+
+  &--header,
+  &--header-left-aside,
+  &--header-right-aside {
+    .#{$boom-prefix}-aside, .#{$boom-prefix}-content {
+      margin-top: 60px;
+    }
+  }
+
+  &--left-aside,
+  &--right-aside {
+    .#{$boom-prefix}-header {
+      display: none;
+    }
+  }
+
+  &--left-aside,
+  &--header-left-aside {
+    .#{$boom-prefix}-aside {
+      left: 0;
+    }
+    .#{$boom-prefix}-content {
+      float: right;
+    }
+  }
+
+  &--right-aside,
+  &--header-right-aside {
+    .#{$boom-prefix}-aside {
+      right: 0;
+    }
+    .#{$boom-prefix}-content {
+      float: left;
+    }
+  }
+}

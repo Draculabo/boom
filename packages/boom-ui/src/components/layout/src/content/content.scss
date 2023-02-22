@@ -1,0 +1,73 @@
+@import '../../../../theme/boomui-var';
+
+.#{$boom-prefix}-content {    // 被访问链接颜色未决定，invert颜色未完善
+  // display: inline-block;
+  // position: relative;
+  z-index: 0;
+
+  // left: 0;
+  // top: 0;
+  height: 85%;
+  width: 75%;
+  min-height: 20vh;
+  min-width: 20vw;
+
+  // min-height: 89.5%;
+  color: $boom-text;
+  background: $boom-global-bg;
+  line-height: 40px;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: auto;
+  padding: 0% 5% 5%;
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    list-style-type: none;
+
+    li {
+      margin: 10px;
+    }
+  }
+
+  a:link {
+    color: $boom-link;
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: $boom-link;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: $boom-link-active;
+  }
+
+  a:active {
+    text-decoration: none;
+    color: $boom-link-active;
+  }
+}
+
+.#{$boom-prefix}-content.#{$boom-prefix}-content__bg {
+  &--center {
+    text-align: center;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}
