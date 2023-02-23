@@ -19,7 +19,7 @@ export const progressProps = {
   // 线性进度条的高度
   height: {
     type: String,
-    default: '20px',
+    default: '15px',
   },
   // 圆形进度条宽度
   strokeWidth: {
@@ -39,14 +39,15 @@ export const progressProps = {
   // 进度条百分比
   percentage: {
     type: Number,
-    default: 20,
+    require: true,
+    default: 30,
   },
   // 进度条文字内容位置 'insideLeft' | 'inside' | 'insideRight' | 'outside' | 'insideBg'
   textPosition: {
     type: String,
-    default: 'inside',
+    default: 'outside',
   },
-  // 进度条状态 'success' | 'warning' | 'error' | 'none'
+  // 进度条状态 'success' | 'warning' | 'danger' | 'none'
   status: {
     type: String as PropType<ProgressStatusType>,
     default: 'none',

@@ -30,7 +30,20 @@ function getComponentsSidebar() {
         {
           text: 'Avatar',
           link: '/components/avatar',
+        },
+        {
+          text: 'Progress',
+          link: '/components/progress'
         }
+      ],
+    },
+    {
+      text: '布局',
+      items: [
+        {
+          text: 'Layout',
+          link: '/components/layout',
+        },
       ],
     },
   ];
