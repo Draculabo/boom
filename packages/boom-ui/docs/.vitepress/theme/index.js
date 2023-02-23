@@ -13,7 +13,6 @@ import Aside from '../../../src/components/layout/src/aside';
 import Header from '../../../src/components/layout/src/header';
 Content.name = 'C' + Content.name;
 import BoomAvatar from '../../../src/components/avatar'
-
 export default {
   ...DefaultTheme,
   enhanceApp(ctx) {

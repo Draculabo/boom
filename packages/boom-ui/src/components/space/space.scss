@@ -1,0 +1,13 @@
+@import '../../theme/boomui-var.scss';
+
+.#{$boom-prefix}-space {
+    width: 100%;
+    display: flex;
+    flex-direction: inherit;
+    flex-wrap: wrap;
+
+    &__vertical {
+        flex-direction: column;
+        width: fit-content;
+    }
+}
