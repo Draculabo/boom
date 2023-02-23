@@ -20,10 +20,6 @@ function getComponentsSidebar() {
           link: '/components/switch',
         },
         {
-          text: 'Avatar',
-          link: '/components/avatar',
-        },
-        {
           text: 'Progress',
           link: '/components/progress'
         }
@@ -35,6 +31,15 @@ function getComponentsSidebar() {
         {
           text: 'Layout',
           link: '/components/layout',
+        },
+      ],
+    },
+    {
+      text: '数据展示',
+      items: [
+        {
+          text: 'Avatar',
+          link: '/components/avatar',
         },
       ],
     },
